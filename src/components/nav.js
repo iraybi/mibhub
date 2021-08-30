@@ -46,42 +46,17 @@ let y = window.matchMedia("(max-width: 600px)");
 stateReset(y);
 y.addListener(stateReset);
 
-
-// Dropdown
-
-function dropdown() {
-    document.getElementById("filter").classList.toggle("show");
-};
-
-// Close the dropdown if the user clicks outside of it
-
-window.onclick = e => {
-    if (!e.target.matches('.dropbtn')) {
-        let dropdown = document.getElementById("filter");
-        if (dropdown.classList.contains('show')) {
-            dropdown.classList.remove('show');
-        }
-    }
-};
-
-
-// navBar.addEventListener("click", e => {
-//     console.log(e.target);
-//     if(e.target.)
-// })
-
-
-let activeNav = Array.from(document.querySelectorAll('.nav_btn'));
+let activeNavBtn = Array.from(document.querySelectorAll('.nav_btn'));
 
 const handleClick = (e) => {
     e.preventDefault();
-    activeNav.forEach(node => {
+    activeNavBtn.forEach(node => {
         node.classList.remove('active');
     });
     e.currentTarget.classList.add('active');
 
 }
 
-activeNav.forEach(node => {
+activeNavBtn.forEach(node => {
     node.addEventListener('click', handleClick)
 });

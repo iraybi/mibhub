@@ -6,12 +6,27 @@
 
 $primaryColor: #00BEB3;
 
+* {
+    border: none;
+
+    &:focus-visible {
+        outline: none;
+    }
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-color: #F5F5F5;
     height: 100vh;
     color: #1D1D33;
+}
+
+.preload {
+    animation-duration: 0s !important;
+    -webkit-animation-duration: 0s !important;
+    transition: none !important;
+    animation: none !important;
 }
 
 ::-webkit-scrollbar {
@@ -233,8 +248,6 @@ main {
     &:hover {
         border-right: 5px solid gray;
         background-color: rgba(255, 255, 255, 0.212);
-
-
     }
 
     .chatname {
@@ -369,6 +382,7 @@ main {
     justify-content: flex-end;
     box-sizing: border-box;
     overflow-x: auto;
+    width: 100%;
 
 }
 
